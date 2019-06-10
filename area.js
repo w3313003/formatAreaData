@@ -37,7 +37,7 @@ let temp = {
 
 const read = new stream.PassThrough();
 const write = fs.createWriteStream(path.join(__dirname, 'area2.js'));
-read.end('export default' + JSON.stringify(temp))
+read.end('export default' + JSON.stringify(temp, null, 4))
 read.pipe(write);
 
 
